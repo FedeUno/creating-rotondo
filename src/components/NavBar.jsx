@@ -8,39 +8,41 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+/* import Tooltip from '@mui/material/Tooltip'; */
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from './CartWidget';
 import StoreIcon from '@mui/icons-material/Store';
+import { Link } from 'react-router-dom';
+const pages = ['Animal', 'Dog', 'Argentine'];
+/* const settings = ['Profile', 'Account', 'Dashboard', 'Logout']; */
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-export const NavBar = () => {
+export default function NavBar () {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+/*   const [anchorElUser, setAnchorElUser] = React.useState(null); */
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+/*   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
+  }; */
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+/*   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };
+  }; */
 
   return (
-    <AppBar position="static">
+    <AppBar className='Nav' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <StoreIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} />
           <Typography
+            className='light'   
             variant="h6"
             noWrap
             component="a"
@@ -55,7 +57,7 @@ export const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            YOUR STORE        
+            t-shirt       
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -86,19 +88,26 @@ export const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                  <Link className="navbar-brand" to= {`category/${page}`} >
+                    {page}
+                  </Link> 
+                  </Typography>
                 </MenuItem>
               ))}
+              
             </Menu>
           </Box>
           <StoreIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 2 }} />
           <Typography
+            className='light'          
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -110,7 +119,7 @@ export const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            YOUR STORE
+            t-shirt
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -119,11 +128,13 @@ export const NavBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link className="navbar" to= {`category/${page}`} >
+                  {page}
+                </Link> 
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: .1 }}>
+          <Box sx={{ flexGrow: 1 }}>
             <CartWidget num={5}/>         
           </Box>
 

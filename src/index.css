@@ -1,6 +1,30 @@
 body {
-  background: rgb(43, 9, 136);
+  background: url(/src/background/two-background.jpg);
 }
+
+.Nav {
+  background: transparent !important;
+}
+
+.light{
+  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+.navbar-brand{
+  color: black;
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.navbar{
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.navbar:hover{
+  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
 
 .container {
   display: flex;
@@ -21,6 +45,7 @@ body {
 }
 
 
+
 .num {
   font-size: 1rem;
   text-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
@@ -35,3 +60,87 @@ body {
 }
 
 
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+/*   text-shadow: 0px 1px 5px rgb(195, 189, 221);   */
+}
+
+.ItemListContainer {
+  margin-top: 3rem;
+
+}
+
+body {
+/*   background-color: black; */
+  padding: 20px;
+  /* background-image: url(./images/two-background.jpg); */
+
+}
+
+h1 {
+  margin-top: 2rem;
+  text-align: center;  
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  text-shadow: 0 0 5px yellowgreen, 0 0 15px yellowgreen, 0 0 30px yellowgreen, 0 0 50px yellowgreen;
+}
+
+.ItemList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Card {
+  width: 16rem;
+  height: 33rem;
+  margin: 15px;
+  transition: all 400ms ease;
+  background: transparent ; 
+  border-radius: 20px;
+  border-color: aliceblue;
+  font-size: .8rem ;
+  display: flex;
+  flex-direction: column;    
+}
+
+.Card:hover{
+  box-shadow: 5px 5px 20px white;
+  transform: translateY(-3%);
+}
+
+.CardText{
+  height: 8rem;
+}
+
+.CardImg {
+  width:230px ;
+  height:280px ;
+  border-radius: 30px;
+} 
+
+.loading {
+  margin-top: 2rem;
+  text-align: center;  
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+.buttoncontainer {
+  background-color:rgb(78, 78, 195);
+  border-radius: 1rem;
+  font-size: .8rem;  
+  transition: 400ms;  
+}
+
+.buttoncontainer:hover {
+  background-color:rgb(33, 33, 149); 
+  box-shadow: 2px 2px 2px white;
+  border: none;
+}

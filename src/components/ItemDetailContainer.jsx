@@ -1,27 +1,33 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import products from '../../src/helpers/arreglox';
-import ItemList from './ItemList';
+import products from '../../src/helpers/arreglox'
+import ItemDetail from './ItemDetail';
 
 
-export default function ItemListContainer() {
+
+
+
+export default function ItemDetailContainer() {
 
   const {id} = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [resultado, setResultado] = useState([]);
+  const [resultado, setResultado] = useState([]);  
 
+  console.log(id)
+  
   useEffect(() => {
     setResultado([]);
     setLoading(true);
     setError(false);
-    const promesa = new Promise((res, rej) => {
+    const promes = new Promise((res, rej) => {
       setTimeout(() => {
-        !id? res(products): res(products.filter(e => e.category === id)); 
-      }, 2000);    
+        res(products[+id - 1 ]);              
+      }, 2000); 
     });
-    promesa
+
+    promes
       .then((result) => {
         setResultado(result);
       })
@@ -38,8 +44,8 @@ export default function ItemListContainer() {
   return(
   <>    
     <div className='loading'> {loading && 'Loading...'} </div>
-    <div> {error && 'Load error'} </div>      
-    <ItemList items={resultado}/> 
+    <div> {error && 'Load error'} </div>    
+    <ItemDetail detail={resultado}/> 
   </>
   )
 }
