@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 
 export default function Item({item}) {
@@ -18,11 +18,9 @@ export default function Item({item}) {
         </Card.Text>
           <div className='button'>
           
-          <NavLink to={`/item/${item.id}`}>
-
+          <Link to={`/item/${item.id}`}>
               <button className='buttoncontainer'>More information</button>
-
-           </NavLink>
+          </Link>
           
           </div>
       </Card.Body>

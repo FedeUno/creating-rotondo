@@ -23,7 +23,7 @@ export default function ItemDetailContainer() {
     setError(false);
     const promes = new Promise((res, rej) => {
       setTimeout(() => {
-        res(products[+id - 1 ]);              
+        res(products[id - 1 ]);              
       }, 2000); 
     });
 

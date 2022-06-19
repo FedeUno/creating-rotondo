@@ -2,6 +2,7 @@ body {
   background: url(/src/background/two-background.jpg);
 }
 
+
 .Nav {
   background: transparent !important;
 }
@@ -132,14 +133,14 @@ h1 {
   text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
 }
 
-.buttoncontainer {
+.buttoncontainer, button{
   background-color:rgb(78, 78, 195);
   border-radius: 1rem;
   font-size: .8rem;  
   transition: 400ms;  
 }
 
-.buttoncontainer:hover {
+.buttoncontainer:hover{
   background-color:rgb(33, 33, 149); 
   box-shadow: 2px 2px 2px white;
   border: none;
