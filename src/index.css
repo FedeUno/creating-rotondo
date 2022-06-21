@@ -2,6 +2,11 @@ body {
   background: url(/src/background/two-background.jpg);
 }
 
+img {
+  width: 8rem;
+  height: 10rem;
+}
+
 
 .Nav {
   background: transparent !important;
@@ -45,7 +50,14 @@ body {
   text-align: center;
 }
 
-
+.gretting2 {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  font-size: 30px;
+  text-shadow: 0 0 5px yellow, 0 0 15px yellow, 0 0 30px yellow, 0 0 50px yellow;
+  text-align: center;
+}
 
 .num {
   font-size: 1rem;

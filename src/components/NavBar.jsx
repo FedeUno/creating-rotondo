@@ -135,7 +135,7 @@ export default function NavBar () {
             ))}
           </Box>
           <Box sx={{ flexGrow: 1 }}>
-            <CartWidget num={5}/>         
+            <CartWidget />         
           </Box>
 
         </Toolbar>

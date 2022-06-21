@@ -15,7 +15,6 @@ export default function ItemDetailContainer() {
   const [error, setError] = useState(false);
   const [resultado, setResultado] = useState([]);  
 
-  console.log(id)
   
   useEffect(() => {
     setResultado([]);
