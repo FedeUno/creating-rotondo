@@ -8,45 +8,38 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-/* import Tooltip from '@mui/material/Tooltip'; */
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from './CartWidget';
 import StoreIcon from '@mui/icons-material/Store';
 import { Link } from 'react-router-dom';
 const pages = ['Animal', 'Dog', 'Argentine'];
-/* const settings = ['Profile', 'Account', 'Dashboard', 'Logout']; */
 
 export default function NavBar () {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-/*   const [anchorElUser, setAnchorElUser] = React.useState(null); */
 
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-/*   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  }; */
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-/*   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  }; */
-
   return (
     <AppBar className='Nav' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          
           <StoreIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} />
+          <Link className='link'  to={'/'}>  
           <Typography
             className='light'   
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            to={'/'}
+            // href="/"
             sx={{
               mr: 12,
               display: { xs: 'none', md: 'flex' },
@@ -58,7 +51,9 @@ export default function NavBar () {
             }}
           >
             t-shirt       
-          </Typography>
+          </Typography> 
+          </Link>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -101,13 +96,14 @@ export default function NavBar () {
               
             </Menu>
           </Box>
+
           <StoreIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 2 }} />
+          <Link className='link' to={'/'}>
           <Typography
             className='light'          
             variant="h5"
             noWrap
-            component="a"
-            href="/"
+            component="a"           
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -121,6 +117,7 @@ export default function NavBar () {
           >
             t-shirt
           </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button

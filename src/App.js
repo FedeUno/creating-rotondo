@@ -8,8 +8,6 @@ import MyProvider from './context/CartContext';
 
 
 
-
-
 export default function App() {
   return (
 

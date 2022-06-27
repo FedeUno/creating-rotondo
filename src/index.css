@@ -2,11 +2,6 @@ body {
   background: url(/src/background/two-background.jpg);
 }
 
-img {
-  width: 8rem;
-  height: 10rem;
-}
-
 
 .Nav {
   background: transparent !important;
@@ -14,6 +9,14 @@ img {
 
 .light{
   text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+  animation: toblink 2s infinite backwards steps(2);
+}
+
+@keyframes toblink {
+  to {
+    color: white;
+    text-shadow: none;
+  }
 }
 
 .navbar-brand{
@@ -24,11 +27,11 @@ img {
 
 .navbar{
   text-decoration: none;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .navbar:hover{
-  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+  text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;  
 }
 
 
@@ -62,14 +65,6 @@ img {
 .num {
   font-size: 1rem;
   text-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white;
-  animation: toblink 2s infinite backwards steps(2);
-}
-
-@keyframes toblink {
-  to {
-    color: rgb(22, 207, 231);
-    text-shadow: none;
-  }
 }
 
 
@@ -79,7 +74,6 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-/*   text-shadow: 0px 1px 5px rgb(195, 189, 221);   */
 }
 
 .ItemListContainer {
@@ -88,9 +82,8 @@ img {
 }
 
 body {
-/*   background-color: black; */
+
   padding: 20px;
-  /* background-image: url(./images/two-background.jpg); */
 
 }
 
@@ -157,3 +150,52 @@ h1 {
   box-shadow: 2px 2px 2px white;
   border: none;
 }
+
+.link {
+  text-decoration: none;
+}
+
+.imagenDetail{
+  height: 30rem  !important;
+  width: 20rem  !important;
+  transition: .5s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 20px white;
+  border-radius: 3rem;
+}
+
+.imagenDetail:hover{
+ 
+  transform: translateY(-3%);
+ 
+}
+
+.imagenCart{
+  height: 15rem  !important;
+  width: 12rem  !important;
+  transition: all 400ms ease;
+}
+
+.imagenCart:hover{
+  box-shadow: 5px 5px 20px white;
+  transform: translateY(-3%);
+  border-radius: 3rem;
+}
+
+.tableContainer {
+  background-color: transparent !important;
+  padding-top: 2rem;
+  
+  
+}
+
+.tableCell {
+  color: white !important;
+  text-shadow: 0 0 5px yellow, 0 0 15px yellow, 0 0 30px yellow, 0 0 50px yellow;
+}
+
+.tableBody {
+  color: white !important;
+}
+

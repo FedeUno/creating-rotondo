@@ -20,7 +20,7 @@ export default function ItemListContainer() {
       setTimeout(() => {
         !id? res(products): res(products.filter(e => e.category === id)); 
       }, 2000);    
-    });
+    });    
     promesa
       .then((result) => {
         setResultado(result);

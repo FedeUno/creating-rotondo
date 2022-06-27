@@ -1,38 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useState} from 'react';
 
 
 
-export default function ItemCount({quantity, setQuantity, stock, onAdd, tocart}) {
+
+export default function ItemCount({initial, stock, onAdd, tocart}) {
   
-  
+  const [count, setCount] = useState(initial) 
 
-  function handlerPlus (){
-    if(quantity < stock) {
-      setQuantity(quantity + 1)
+  function increase (){
+    if(count < stock) {
+      setCount(count + 1)
     }
   }
 
-  function handlerMinus (){
-    if(quantity > 1) {
-      setQuantity(quantity - 1)
+  function decrease (){
+    if(count > 1) {
+      setCount(count - 1)
     }
   }
-
 
 
   return (
     <>
     { tocart? 
       <> 
-        <button onClick={handlerMinus}> -  </button>
-        <span> {quantity} </span>
-        <button onClick={handlerPlus}> + </button>
+        <div>
+          <button onClick={decrease}> -  </button>
+          <span> {count} </span>
+          <button onClick={increase}> + </button>
+        </div>        
         <br/>
-        <br/>
-        <button onClick={onAdd} >Add to cart</button> 
+        <button disabled={count === 0} onClick={()=>{onAdd(count)}} >Add to cart</button> 
         <br/>      
-        
       </>
       :
       <>
