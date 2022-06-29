@@ -7,20 +7,20 @@ import { Box, Card, Typography } from "@mui/material";
 
 
 export default function ItemDetail({detail}) {
-  
+ 
   const {isInCart, addItem, qtyInCart} = useContext(CartContext)
   const {title, description, pictureUrl, id, stock,price} = detail;
   const [tocart, setTocart] = useState(true) 
    
   const onAdd = (q) => {
-    isInCart(detail.id)
+    isInCart(id)
     addItem(detail, q)
     setTocart(!tocart)
   }
 
   return (
     <>
-    {pictureUrl?     
+     {pictureUrl?  
       <Card sx={{
         backgroundColor: 'transparent',
         width: '100%',
@@ -51,7 +51,7 @@ export default function ItemDetail({detail}) {
           borderRadius: '20px' 
         }}
       >
-        <img className='imagenDetail' src={`../${pictureUrl}`} alt={title} sx={{flexShrink: 1, minWidth: '100%', minHeight: '100%',  objectFit: 'cover' }} />
+        <img className='imagenDetail' src={pictureUrl} alt={title} sx={{flexShrink: 1, minWidth: '100%', minHeight: '100%',  objectFit: 'cover' }} />
       </Box>
 
       <Box
@@ -78,13 +78,15 @@ export default function ItemDetail({detail}) {
             onAdd={onAdd} 
             tocart={tocart}         
             initial={ qtyInCart(id) === stock ? 0 : 1 }
-            stock={ qtyInCart(id) ? stock - qtyInCart(id) : stock }
+            stock={ qtyInCart(id) ? stock - qtyInCart(id) : stock } 
+           
       />
       
     </Box>
     </Card>
-
-    :null}
+   :null}  
   </>
   )
 }
+
+ 

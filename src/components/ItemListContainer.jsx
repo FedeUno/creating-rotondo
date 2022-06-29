@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import products from '../../src/helpers/arreglox';
@@ -10,10 +10,10 @@ export default function ItemListContainer() {
   const {id} = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [resultado, setResultado] = useState([]);
+  const [resolved, setResolved] = useState([]);
 
   useEffect(() => {
-    setResultado([]);
+    setResolved([]);
     setLoading(true);
     setError(false);
     const promesa = new Promise((res, rej) => {
@@ -23,7 +23,7 @@ export default function ItemListContainer() {
     });    
     promesa
       .then((result) => {
-        setResultado(result);
+        setResolved(result);
       })
       .catch((error) => {
         setError(true);
@@ -39,7 +39,7 @@ export default function ItemListContainer() {
   <>    
     <div className='loading'> {loading && 'Loading...'} </div>
     <div> {error && 'Load error'} </div>      
-    <ItemList items={resultado}/> 
+    <ItemList items={resolved}/> 
   </>
   )
-}
+} */

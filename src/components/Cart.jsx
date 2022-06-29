@@ -43,7 +43,7 @@ export default function Cart() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="e" align="center">
-              <img className='imagenCart' src={`../${e.pictureUrl} `} alt="imagen" />
+              <img className='imagenCart' src={e.pictureUrl} alt="imagen" />
               </TableCell>
               <TableCell className='tableBody' align="center">{e.title}</TableCell>
               <TableCell className='tableBody' align="center">{e.qty}</TableCell>
