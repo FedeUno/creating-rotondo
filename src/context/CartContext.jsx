@@ -9,12 +9,13 @@ const { Provider } = CartContext
 
 export default function MyProvider( { children } ) {
 
-  const [ cart, setCart ] = useState( [] )
-
+  const [ cart, setCart ] = useState( JSON.parse(localStorage.getItem('cart'))? JSON.parse(localStorage.getItem('cart')):[]);
+  // ver por qué no funciona 👆
 
   const isInCart = ( id ) => {
     return cart.some( x => x.id === id )
   }
+
 
   const addItem = ( item, qty ) => {
 

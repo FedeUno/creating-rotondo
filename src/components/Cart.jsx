@@ -66,7 +66,8 @@ export default function Cart() {
           total:  $ {getItemPrice()}  
         <br/>
         <br/>
-        <button>Finish Buying</button>
+        <Link to={'/checkout'}> <button>Finish Buying</button></Link>  
+        
         </div>
     </>
   :

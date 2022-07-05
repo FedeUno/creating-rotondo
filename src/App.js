@@ -4,8 +4,9 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Cart from './components/Cart'; 
 import MyProvider from './context/CartContext';
-import Checkout from './components/Checkout';
+import FBCheckout from './firebase/FBCheckout';
 import ItemListContainerA from './components/ItemListContainerA';
+import NotFound from './components/NotFound';
 
 
 
@@ -23,7 +24,8 @@ export default function App() {
         <Route path="/category/:id" element={ <ItemListContainerA /> } />
         <Route path="/item/:id" element={<ItemDetailContainerA />} />   
         <Route path="/cart" element={<Cart />} />  
-        <Route path="/checkout" element={<Checkout />} />          
+        <Route path="/checkout" element={<FBCheckout />} />    
+        <Route path="*" element={<NotFound />} />      
       </Routes>
 
       <Footer className="footer" />
