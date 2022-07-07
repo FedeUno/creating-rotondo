@@ -13,7 +13,7 @@ const [email, setEmail]= useState('')
 const [idBuy, setIdBuy] = useState('');
 const [disabled, setDisabled] = useState(false)
 
-const{cart, getItemPrice} = useContext(CartContext)
+const{cart, getItemPrice, emptyCart} = useContext(CartContext)
 
 const db = getFirestore();
 const orderCollection = collection(db,'orders');
@@ -22,6 +22,7 @@ const orderCollection = collection(db,'orders');
 
 function handleClick  () {
   setDisabled(!disabled) 
+ 
 
   const order =  {
     buyer:{name,email, celphone},
@@ -33,6 +34,7 @@ function handleClick  () {
   addDoc(orderCollection, order).then(({id})=> {
     setIdBuy(id)  
   });
+  emptyCart()
 }
 
 

@@ -7,6 +7,7 @@ import MyProvider from './context/CartContext';
 import FBCheckout from './firebase/FBCheckout';
 import ItemListContainerA from './components/ItemListContainerA';
 import NotFound from './components/NotFound';
+import Order from './components/Order/Order';
 
 
 
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/item/:id" element={<ItemDetailContainerA />} />   
         <Route path="/cart" element={<Cart />} />  
         <Route path="/checkout" element={<FBCheckout />} />    
+        <Route path="/order" element={<Order />} />    
         <Route path="*" element={<NotFound />} />      
       </Routes>
 

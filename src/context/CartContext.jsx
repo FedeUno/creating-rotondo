@@ -1,4 +1,4 @@
-import  React, {createContext,useState} from 'react';
+import  React, { createContext , useEffect, useState } from 'react';
 
 
 
@@ -9,8 +9,10 @@ const { Provider } = CartContext
 
 export default function MyProvider( { children } ) {
 
-  const [ cart, setCart ] = useState( JSON.parse(localStorage.getItem('cart'))? JSON.parse(localStorage.getItem('cart')):[]);
-  // ver por qué no funciona 👆
+  const [ cart, setCart ] = useState (JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [])
+  
+
+ 
 
   const isInCart = ( id ) => {
     return cart.some( x => x.id === id )
@@ -64,6 +66,13 @@ export default function MyProvider( { children } ) {
     }
     return 0;
   }
+
+  useEffect(()=>{  
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+    console.log(cart)
+ 
+  }, [cart])  
  
   return (
     <Provider value={{
