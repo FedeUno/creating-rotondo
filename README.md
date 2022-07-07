@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Video:
 
-![GIF de muestra.](/public/video.mp4 "Vista del proyecto.")
+![GIF de muestra.](/public/GIF.gif "Vista del proyecto.")
 
 
 ## Available Scripts
