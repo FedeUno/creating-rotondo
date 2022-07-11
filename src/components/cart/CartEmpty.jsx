@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-import CloudOffIcon from "@mui/icons-material/CloudOff";
+import { ShoppingCart } from "@mui/icons-material";
 
-export default function NotFound() {
+export default function CartEmpty() {
   return (
     <Box
       sx={{
@@ -11,15 +10,19 @@ export default function NotFound() {
         justifyContent: "center",
         textAlign: "center",
         flexDirection: "column",
-        marginTop: 1,
-        marginBottom: 12,
+        margin: "auto",
+        marginTop: "1rem",
+        marginBottom: "4rem",
         gap: 3,
       }}
     >
-      <CloudOffIcon sx={{ fontSize: "200px", margin: "2rem" }} />
+      <ShoppingCart
+        color="primary"
+        sx={{ fontSize: "100px", margin: "3rem" }}
+      />
 
       <Typography className="gretting" variant="h5">
-        NOT FOUND
+        Your cart is empty
       </Typography>
 
       <Link to={"/"}>

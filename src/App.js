@@ -1,40 +1,32 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom' ;
-import ItemDetailContainerA from './components/ItemDetailContainerA'; 
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import Cart from './components/Cart'; 
-import MyProvider from './context/CartContext';
-import FBCheckout from './firebase/FBCheckout';
-import ItemListContainerA from './components/ItemListContainerA';
-import NotFound from './components/NotFound';
-import Order from './components/Order/Order';
-
-
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import ItemDetailContainer from "./components/item/ItemDetailContainer";
+import NavBar from "./components/layaout/NavBar";
+import Cart from "./components/cart/Cart";
+import MyProvider from "./context/CartContext";
+import Checkout from "../src/components/checkout/Checkout";
+import ItemListContainer from "./components/item/ItemListContainer";
+import NotFound from "./components/NotFound";
+import Order from "./components/Order/Order";
+import Footer from "./components/layaout/Footer";
 
 export default function App() {
-
   return (
+    <BrowserRouter>
+      <MyProvider>
+        <NavBar />
 
-  <BrowserRouter>
-    <MyProvider>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
 
-      <NavBar />
-      
-      <Routes>
-        <Route path="/" element={ <ItemListContainerA /> } />
-        <Route path="/category/:id" element={ <ItemListContainerA /> } />
-        <Route path="/item/:id" element={<ItemDetailContainerA />} />   
-        <Route path="/cart" element={<Cart />} />  
-        <Route path="/checkout" element={<FBCheckout />} />    
-        <Route path="/order" element={<Order />} />    
-        <Route path="*" element={<NotFound />} />      
-      </Routes>
-
-      <Footer className="footer" />
-
-    </MyProvider>
-  </BrowserRouter>
-  
+        <Footer />
+      </MyProvider>
+    </BrowserRouter>
   );
 }
-

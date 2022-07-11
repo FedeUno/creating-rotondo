@@ -25,8 +25,7 @@ export default function Order() {
             errors.name='Please enter a name'
           }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(val.name)){
             errors.name = 'The name can only contain letters and spaces'
-          }
-          
+          }      
           if(!val.email){
             errors.email='Please enter an email'
           }else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(val.email)){
