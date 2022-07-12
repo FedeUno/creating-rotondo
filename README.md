@@ -1,19 +1,19 @@
 # T-shirt
 
-## Descripción
+## Description
 
-Proyecto desarrollado por el alumno Federico Rotondo durante el curso de `React JS` en `Coderhouse`, comisión 31205, año 2022. ![Profesor:] Guillermo Jorge Fergnani. ![Tutora:] María Pía Achigar.
+Project developed by the `student Federico Rotondo` during the `React JS` course at `Coderhouse`, commission 31205, year 2022. **`Professor`: Guillermo Jorge Fergnani. `Tutor`: María Pía Achigar.**
 
-La aplicación web consiste en un ecommerce donde se puede filtrar los productos de acuerdo a categorías, y acceder a ver el detalle de cada producto. Asimismo los elementos seleccionados pueden ser agregados al carrito de compras y luego de completar un formulario se finaliza el proceso de compra.
+The web application consists of an ecommerce where you can filter the products according to categories, and access to see the details of each product. Likewise, the selected items can be added to the shopping cart and after completing a form, the purchase process is completed.
 
-Las órdenes de compra generadas se almacenan en `Firebase`.
+Generated purchase orders are stored in `Firebase`.
 
-Podrás visitar este proyecto en  ...
+You can visit this project in...
 
-![GIF](/public/theGif.gif "Gif del proyecto")
+![GIF](/public/theGif.gif "Proyect gif")
 
 
-## Tecnologías utilizadas
+## Used technology
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) 
 
@@ -22,21 +22,19 @@ Podrás visitar este proyecto en  ...
 * [Material UI](https://mui.com/)
 * [Firebase](https://firebase.google.com/) 
 
-## Otras consideraciones
+## Other considerations
 
-### MaterialUI
-Se escogió Material UI como librería de componentes para agilizar el proceso de desarrollo y estilado de la aplicación, aprovechando la posibilidad de extender los componentes mediante el uso de themes.
+### `MaterialUI`
+Material UI was chosen as the component library to streamline the application development and styling process, taking advantage of the possibility of extending the components through the use of themes.
 
-### Firebase
-En Firebase se almacenaron, además del listado de productos y las órdenes generadas, las categorías correspondientes a los productos. Además se utilizó para hacer the Deployement.-
+### `Firebase`
+In Firebase, in addition to the list of products and the generated orders, the categories corresponding to the products were stored. It was also used to make the Deployment.-
 
-### LocalStorage
-Se utilizó LocalStorage para persistir el carrito de los usuarios en sus dispositivos en el caso de que no finalicen el flujo de compra para mejorar la experiencia de uso.
+### `LocalStorage`
+LocalStorage was used to persist the users' cart on their devices in the event that they do not complete the purchase flow to improve the user experience.
 
-### Control de Stock
-Se implementó control de stock en dos puntos del flujo de compra para evitar que un usuario pueda adquirir una cantidad mayor de un producto de la que se encuentre disponible:
-
-
+### `Control de Stock`
+Stock control is implemented to prevent a user from purchasing a larger quantity of a product than is available.
 
 
 ## Available Scripts
