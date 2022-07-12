@@ -8,7 +8,8 @@ The web application consists of an ecommerce where you can filter the products a
 
 Generated purchase orders are stored in `Firebase`.
 
-You can visit this project in...
+You can visit this project in [https://ecommerce-b6267.web.app/](https://ecommerce-b6267.web.app/)
+
 
 ![GIF](/public/theGif.gif "Proyect gif")
 
@@ -21,6 +22,7 @@ You can visit this project in...
 * [React Router Dom](https://reactrouter.com/)
 * [Material UI](https://mui.com/)
 * [Firebase](https://firebase.google.com/) 
+* [Formik](https://formik.org/) 
 
 ## Other considerations
 
@@ -29,6 +31,9 @@ Material UI was chosen as the component library to streamline the application de
 
 ### `Firebase`
 In Firebase, in addition to the list of products and the generated orders, the categories corresponding to the products were stored. It was also used to make the Deployment.-
+
+### `Formik`
+Used for form validation.
 
 ### `LocalStorage`
 LocalStorage was used to persist the users' cart on their devices in the event that they do not complete the purchase flow to improve the user experience.
