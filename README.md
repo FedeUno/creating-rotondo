@@ -1,10 +1,42 @@
-# Getting Started with Create React App
+# T-shirt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Video:
+Proyecto desarrollado por el alumno Federico Rotondo durante el curso de `React JS` en `Coderhouse`, comisión 31205, año 2022. ![Profesor:] Guillermo Jorge Fergnani. ![Tutora:] María Pía Achigar.
 
-![GIF de muestra.](/public/GIF.gif "Vista del proyecto.")
+La aplicación web consiste en un ecommerce donde se puede filtrar los productos de acuerdo a categorías, y acceder a ver el detalle de cada producto. Asimismo los elementos seleccionados pueden ser agregados al carrito de compras y luego de completar un formulario se finaliza el proceso de compra.
+
+Las órdenes de compra generadas se almacenan en `Firebase`.
+
+Podrás visitar este proyecto en  ...
+
+![GIF](/public/theGif.gif "Gif del proyecto")
+
+
+## Tecnologías utilizadas
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) 
+
+* [React JS](https://reactjs.org/)
+* [React Router Dom](https://reactrouter.com/)
+* [Material UI](https://mui.com/)
+* [Firebase](https://firebase.google.com/) 
+
+## Otras consideraciones
+
+### MaterialUI
+Se escogió Material UI como librería de componentes para agilizar el proceso de desarrollo y estilado de la aplicación, aprovechando la posibilidad de extender los componentes mediante el uso de themes.
+
+### Firebase
+En Firebase se almacenaron, además del listado de productos y las órdenes generadas, las categorías correspondientes a los productos. Además se utilizó para hacer the Deployement.-
+
+### LocalStorage
+Se utilizó LocalStorage para persistir el carrito de los usuarios en sus dispositivos en el caso de que no finalicen el flujo de compra para mejorar la experiencia de uso.
+
+### Control de Stock
+Se implementó control de stock en dos puntos del flujo de compra para evitar que un usuario pueda adquirir una cantidad mayor de un producto de la que se encuentre disponible:
+
+
 
 
 ## Available Scripts
@@ -44,32 +76,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { Box } from '@mui/material';
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
@@ -33,7 +34,26 @@ export default function ItemDetailContainer() {
       ) : error ? (
         <Navigate to="/404" />
       ) : (
+        <Box
+        sx={{
+          backgroundColor: "transparent",
+          width: "100%",
+          borderRadius: "20px",
+          padding: "20px",
+          display: "flex",
+          gap: 5,
+          height: {
+            xs: "auto",
+            md: "600px",
+          },
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+        }}
+        >
         <ItemDetail detail={resolved} />
+        </Box>
       )}
     </>
   );
